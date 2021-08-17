@@ -92,10 +92,11 @@ function addLog(message) {
     if (typeof message != 'string') {
         console.log('Log message should be a "string"!')
     } else {
-        const logMessageItem = document.createElement('li');
+        const logMessageItem = document.createElement('p');
         logMessageItem.classList.add('log-message');
         logMessageItem.textContent = message;
         $logs.appendChild(logMessageItem);
+        $logs.scrollTop = $logs.scrollHeight;
     }    
 }
 
