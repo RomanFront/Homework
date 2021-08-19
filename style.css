@@ -504,6 +504,14 @@ h1 {
     position: absolute;
     z-index: 100;
 }
+.lightning-button.disabled {
+    background-color: rgb(0 0 0 / 20%);
+    cursor: unset;
+    border-color: #ffffff80;
+}
+.lightning-button.disabled:hover {
+    background-color: rgb(0 0 0 / 20%);
+}
 @keyframes strike {
     0% {
         opacity: 0;
@@ -523,4 +531,28 @@ h1 {
 }
 .lightning-button img {
     width: 100%;
+}
+
+.logs-container {
+    margin: 100px auto;
+    width: 100%;
+    max-width: 800px;
+    height: 200px;
+    border-bottom: 2px #fff solid;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+}
+#logs {
+    height: 100%;
+    padding: 15px 10px;
+    min-height: min-content;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+#logs .log-message {
+    margin: 2px;
+    font-weight: normal;
+}
+#logs .log-message:last-child {
+    font-weight: bold;
 }
